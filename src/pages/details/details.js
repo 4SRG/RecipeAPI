@@ -39,7 +39,7 @@ const Details = () => {
                     <p className='font-bold text-[1.3rem]'>{detailRecipe.title}</p>
                     <button onClick={()=>handleFav(detailRecipe)}className='my-1'>{inFav(detailRecipe.recipe_id) ? "Remove From Favorites":"Save As Favorites"}</button>
                     <ul>
-                        {ingredientz && ingredietz.length ? ingredientz : null}
+                        {ingredientz && ingredientz.length ? ingredientz : null}
                     </ul>
                 </div>
             </div>
