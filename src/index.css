@@ -1,0 +1,75 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body,html{
+    margin:0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+
+/*NAVBAR*/
+.navbar .input{
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px pink;
+}
+.navbar ul a{
+    padding: 2px 0px 2px 0px;
+}
+.navbar ul a:hover{
+    text-decoration: underline;
+    color:rgb(155, 155, 155);
+}
+
+/*HOME*/
+.home .box{
+    width: 100%;
+    box-shadow: inset 0px 0px 5px black;
+    padding-bottom: 50px;
+    position: relative;
+    border-radius: 10px;
+
+}
+.home .box .img-container{
+    width: 90%;
+    height:140px;
+    margin:10px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: solid black 1px;
+}
+.home .box img{
+    transition: all 0.5s;
+}
+.home .box p{
+    padding-left: 15px;
+    padding-right: 10px;
+}
+.home .box a{
+    background-color: black;
+    color:white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: lighter;
+    position: absolute;
+    bottom:20px;
+    left:15px;
+    transition: all .3s;
+}
+.home .box a:hover, .details button:hover{
+    background-color: rgb(194, 194, 194);
+    color:black
+}
+
+.details button{
+    background-color: black;
+    color:white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: lighter;
+    transition: all .3s;
+}
+
+
