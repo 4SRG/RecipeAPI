@@ -6,7 +6,11 @@ const Details = () => {
     const {id} = useParams()
     const {detailRecipe, setDetailRecipe, handleFav, inFav} = useContext(Context)
     
-
+    const ingredientz = detailRecipe?.ingredients?.map(a =>{
+        return(
+            <li>{a}</li>
+        )
+    })
     useEffect(()=>{
     async function fetchDetail(idz) {
         try{
@@ -18,11 +22,7 @@ const Details = () => {
             console.log(e)
         }
     }
-    const ingredients = detailRecipe?.ingredients?.map(a =>{
-        return(
-            <li>{a}</li>
-        )
-    })
+
         fetchDetail(id)
     },[id])
 
@@ -39,7 +39,7 @@ const Details = () => {
                     <p className='font-bold text-[1.3rem]'>{detailRecipe.title}</p>
                     <button onClick={()=>handleFav(detailRecipe)}className='my-1'>{inFav(detailRecipe.recipe_id) ? "Remove From Favorites":"Save As Favorites"}</button>
                     <ul>
-                        {ingredients}
+                        {ingredientz && ingredietz.length ? ingredientz : null}
                     </ul>
                 </div>
             </div>
