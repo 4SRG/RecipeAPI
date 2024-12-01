@@ -35,7 +35,7 @@ function ContextState({ children }) {
             cpyFav.push(idz)
         }
         else {
-            cpyFav.splice(index)
+            cpyFav.splice(index, 1)
         }
         setFavoriteList(cpyFav)
     }
