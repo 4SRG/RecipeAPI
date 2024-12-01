@@ -24,7 +24,7 @@ const Details = () => {
     }
 
         fetchDetail(id)
-    },[id])
+    },[id, setDetailRecipe])
 
     // if(!detailRecipe) return(<div className='flex justify-center items-center h-[70vh]'><h1>Lodaing Details...</h1></div>)
     return (
