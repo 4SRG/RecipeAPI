@@ -6,6 +6,8 @@ const Details = () => {
     const {id} = useParams()
     const {detailRecipe, setDetailRecipe, handleFav, inFav} = useContext(Context)
     
+
+    useEffect(()=>{
     async function fetchDetail(idz) {
         try{
             const response = await fetch(`https://forkify-api.herokuapp.com/api/get?rId=${idz}`)
@@ -21,8 +23,6 @@ const Details = () => {
             <li>{a}</li>
         )
     })
-
-    useEffect(()=>{
         fetchDetail(id)
     },[id])
 
